@@ -9,7 +9,23 @@ class car :
         print ('max speed is: ', self.max_speed)
         print ('mileage  is: ',  self.mileage)
 
-altroz  = car('altroz', 120, 23)
+class bike :
+    def __init__(self, max_speed) :
+        self.max_speed = max_speed
+        pass
 
-altroz.prntdetails()
-        
+altroz  = car('altroz', 120, 23)
+nexon = car('nexon', 125, 18 )
+shine = bike(90)
+
+# altroz.prntdetails()
+# print(type(car))
+
+def speeddiff(a:car , b:car):
+    if(type(a) != type(b)):
+        print('cannot compare')
+        return
+    print('Difference in speed is:', a.max_speed - b.max_speed)
+
+speeddiff(nexon, altroz)
+speeddiff(nexon,  shine)
