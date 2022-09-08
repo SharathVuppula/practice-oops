@@ -1,4 +1,7 @@
 class car :
+
+    tires  =  4 #class variables
+
     def __init__(self,  name,  max_speed, mileage):
         self.name = name
         self.max_speed  = max_speed
@@ -29,3 +32,9 @@ def speeddiff(a:car , b:car):
 
 speeddiff(nexon, altroz)
 speeddiff(nexon,  shine)
+
+#practice class variables
+print (altroz.tires)
+altroz.tires = 7
+print (nexon.tires)
+print (altroz.tires)
