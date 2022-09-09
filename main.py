@@ -1,6 +1,7 @@
 class car :
 
     tires  =  4 #class variables
+    color = 'white'
 
     def __init__(self,  name,  max_speed, mileage):
         self.name = name
@@ -12,7 +13,7 @@ class car :
         print ('max speed is: ', self.max_speed)
         print ('mileage  is: ',  self.mileage)
 
-# creating a class method named display tires
+# creating class methods 
     @classmethod
     def displaytires(cls):
         print ("Every  car has", car.tires, "tires")
@@ -21,6 +22,11 @@ class car :
     def changenumbeoftires(cls, tires):
         cls.tires =  tires
         print ("Number of tires is changed to ", car.tires)
+
+#  Create static methods
+    @staticmethod
+    def showcolor():
+        print(car.color)
 
 # global method
 def speeddiff(a:car , b:car):
@@ -53,3 +59,4 @@ print (altroz.tires)
 
 car.displaytires()
 car.changenumbeoftires(8)
+car.showcolor()
