@@ -55,19 +55,19 @@ altroz  = car('altroz', 120, 23)
 nexon = car('nexon', 125, 18 )
 shine = bike(90)
 
-altroz.prntdetails()
+# altroz.prntdetails()
 # print(type(car))
 
 
-speeddiff(nexon, altroz)
-speeddiff(nexon,  shine)
+# speeddiff(nexon, altroz)
+# speeddiff(nexon,  shine)
 
 #practice class variables
-print (altroz.tires)
-altroz.tires = 7
-print (nexon.tires)
-print (altroz.tires)
+# print (altroz.tires)
+# altroz.tires = 7
+# print (nexon.tires)
+# print (altroz.tires)
 
-car.displaytires()
-car.changenumbeoftires(8)
-car.showcolor()
+# car.displaytires()
+# car.changenumbeoftires(8)
+# car.showcolor()
