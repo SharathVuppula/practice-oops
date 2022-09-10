@@ -7,11 +7,22 @@ class car :
         self.name = name
         self.max_speed  = max_speed
         self.mileage = mileage
+        self.musys = self.musicsystm() #paraenthesis are mandatory while creting an object/inner object.
 
     def prntdetails(self):
         print ('name is: ', self.name)
         print ('max speed is: ', self.max_speed)
         print ('mileage  is: ',  self.mileage)
+        self.musys.show()
+
+    #inner class music system
+    class musicsystm:
+        def __init__(self):
+            self.brand = 'JBL'
+            self.nospkrs = 6
+        
+        def show(self):
+            print("musicsystem brand is", self.brand,"Number of speakers is", self.nospkrs)
 
 # creating class methods 
     @classmethod
@@ -44,7 +55,7 @@ altroz  = car('altroz', 120, 23)
 nexon = car('nexon', 125, 18 )
 shine = bike(90)
 
-# altroz.prntdetails()
+altroz.prntdetails()
 # print(type(car))
 
 
