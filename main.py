@@ -62,7 +62,7 @@ shine = bike(90)
 # speeddiff(nexon, altroz)
 # speeddiff(nexon,  shine)
 
-#practice class variables
+# practice class variables
 # print (altroz.tires)
 # altroz.tires = 7
 # print (nexon.tires)
