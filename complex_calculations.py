@@ -5,26 +5,33 @@ class Complex(object):
         self.real  =  real
         self.imaginary =  imaginary
     def __add__(self, no):
-        r = self.real + no.real
-        im  =  self.imaginary + no.imaginary
-        return '{} {}' .format(r,im)
+        r = Complex(0,0)
+        r.real = self.real + no.real
+        r.imaginary  =  self.imaginary + no.imaginary
+        return r
     def __sub__(self, no):
-        r = self.real - no.real
-        im  =  self.imaginary - no.imaginary
-        return (r,im)
+        r = Complex(0,0)
+        r.real = self.real - no.real
+        r.imaginary  =  self.imaginary - no.imaginary
+        return r
     def __mul__(self, no):
-        r = (self.real * no.real) - (self.imaginary * no.imaginary)
-        im  =  (self.real * no.imaginary) + (self.imaginary * no.real)
-        return (r,im)
-    def __truediv__(self, no):
-        r = self.real / no.real
-        im  =  self.imaginary / no.imaginary
-        return (r,im)
+        r = Complex(0,0)
+        r.real = (self.real * no.real) - (self.imaginary * no.imaginary)
+        r.imaginary  =  (self.real * no.imaginary) + (self.imaginary * no.real)
+        return r
+    def __truediv__(self, no):# a+bi / c +di = (ac + bd)/(c2 +d2) + (bc -ad)/(c2 + d2) i  
+        r = Complex(0,0)
+        r.real = (self.real * no.real + self.imaginary * no.imaginary)/ (math.pow(no.real,2) + math.pow(no.imaginary,2))
+        r.imaginary  =  (self.imaginary * no.real - self.real * no.imaginary)/ (math.pow(no.real,2) + math.pow(no.imaginary,2))
+        return r
 
     def mod(self):
-        r = (self.real * self.real) + (self.imaginary * self.imaginary)
-        r = math.sqrt(r)
+        r = Complex(0,0)
+        temp = (self.real * self.real) + (self.imaginary * self.imaginary)
+        temp = math.sqrt(temp)
+        r.real = temp
         return r
+
     def __str__(self):
         if self.imaginary == 0:
             result = "%.2f+0.00i" % (self.real)
